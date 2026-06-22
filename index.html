@@ -598,8 +598,7 @@ function tick(){
 tick();setInterval(tick,1000);
 
 /* ═══════════ LEADERBOARD ═══════════ */
-// ⚠️ Railway 部署后，把下面这个地址换成你的 Railway URL（例如 https://xxx.up.railway.app）
-// 本地开发时保持 window.location.origin 即可
+// 本地开发自动使用 localhost，部署环境使用当前域名
 const API_BASE = window.location.origin === 'null' || window.location.origin === 'file://' 
   ? 'http://localhost:3456' 
   : window.location.origin;
@@ -608,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-22 12:40
+// 数据更新时间: 2026-06-22 21:02
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"审核中","platform":"抖音"},
@@ -668,7 +667,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-22 14:45';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-22 21:02';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
