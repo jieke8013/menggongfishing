@@ -608,7 +608,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-22 12:15
+// 数据更新时间: 2026-06-22 12:40
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"审核中","platform":"抖音"},
@@ -659,7 +659,7 @@ async function fetchLeaderboard() {
   } catch (e) {
     console.warn('[排行榜] API 不可用，使用兜底数据:', e.message);
     // 外网分享版走定时同步，本机版才提示「后端未启动」
-    const isDeploy = window.location.hostname.includes('app.codebuddy.work');
+    const isDeploy = window.location.hostname.includes('app.codebuddy.work') || window.location.hostname.includes('github.io');
     useDemoData(isDeploy ? '数据来源: 飞书多维表格 · 定时同步' : '⚠ 后端未启动，显示示例数据');
   }
 }
