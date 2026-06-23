@@ -607,25 +607,20 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-23 09:27
+// 数据更新时间: 2026-06-23 10:18
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"审核中","platform":"抖音"},
-  {"name":"001","location":"广东东莞","product":"突击鲢四代","weight":45.99,"category":"30+","status":"已核验","platform":"快手"},
-  {"name":"02","location":"广东广州","product":"淦将二代","weight":45.98,"category":"30+","status":"已核验","platform":"快手"},
-  {"name":"003","location":"山东临沂","product":"突击鲢四代","weight":45.97,"category":"30+","status":"已核验","platform":"快手"},
-  {"name":"004","location":"山东金控","product":"淦将二代","weight":45.96,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"小米爱钓鱼","location":"湖北熊渡坝上","product":"突击鲢四代","weight":42,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"1.9倍肌肉","location":"四川广元","product":"淦将巨物","weight":40,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"简单生活简单过","location":"武汉蔡甸东荆河","product":"突击鲢四代","weight":38,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"我是大壮啊","location":"沈阳溪溪湖湿地公园","product":"突击鲢四代","weight":36.45,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"肖家公子 承接彩钢工程 【宝丰镇]","location":"湖北新洲","product":"突击鲢四代","weight":34,"category":"30+","status":"审核中","platform":"抖音"},
-  {"name":"王强","location":"山东","product":"突击鲢四代","weight":32.69,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"笑脸","location":"江西上饶","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"小可乐","location":"安徽","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"审核中","platform":"抖音"},
-  {"name":"王爽","location":"广东","product":"突击鲢四代","weight":20.59,"category":"15+","status":"已核验","platform":"抖音"},
-  {"name":"李四","location":"山西","product":"突击鲢四代","weight":15.69,"category":"15+","status":"已核验","platform":"抖音"},
-  {"name":"周元","location":"湖北","product":"淦将二代","weight":15.69,"category":"15+","status":"已核验","platform":"抖音"}
+  {"name":"阿泽爱钓鱼（四季抽鲢庸）","location":"江西漳州","product":"淦将二代","weight":30.16,"category":"30+","status":"审核中","platform":"抖音"}
 ];
 
 // 从后端 API 拉取飞书多维表格数据
@@ -667,7 +662,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-23 09:27';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-23 10:18';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
