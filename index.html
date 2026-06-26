@@ -607,11 +607,11 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-24 14:07
+// 数据更新时间: 2026-06-26 08:43
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"审核中","platform":"抖音"},
-  {"name":"小米爱钓鱼","location":"湖北熊渡坝上","product":"突击鲢四代","weight":42,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"小米爱钓鱼","location":"湖北宜昌熊渡坝上","product":"突击鲢四代","weight":42.6,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"1.9倍肌肉","location":"四川广元","product":"淦将巨物","weight":40,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"钓友一号","location":"铜陵顺安河","product":"突击鲢四代","weight":39.66,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"简单生活简单过","location":"武汉蔡甸东荆河","product":"突击鲢四代","weight":38,"category":"30+","status":"审核中","platform":"抖音"},
@@ -665,7 +665,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-24 14:07';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-26 08:43';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
