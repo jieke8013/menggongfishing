@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-27 20:57
+// 数据更新时间: 2026-06-28 09:01
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"审核中","platform":"抖音"},
@@ -623,7 +623,9 @@ const demoData = [
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"阿泽爱钓鱼（四季抽鲢庸）","location":"江西漳州","product":"淦将二代","weight":30.16,"category":"30+","status":"审核中","platform":"抖音"},
-  {"name":"小宇钓鱼-乐安河","location":"江西上饶","product":"淦将二代","weight":25.86,"category":"15+","status":"审核中","platform":"抖音"}
+  {"name":"小宇钓鱼-乐安河","location":"江西上饶","product":"淦将二代","weight":25.86,"category":"15+","status":"审核中","platform":"抖音"},
+  {"name":"蒲涛钓鱼","location":"贵州黔南","product":"突击鲢四代","weight":20,"category":"15+","status":"审核中","platform":"抖音"},
+  {"name":"一条","location":"江西·新余\n","product":"突击鲢四代","weight":15,"category":"15+","status":"审核中","platform":"抖音"}
 ];
 
 // 从后端 API 拉取飞书多维表格数据
@@ -665,7 +667,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-27 20:57';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-28 09:01';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
