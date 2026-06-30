@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-06-30 10:26
+// 数据更新时间: 2026-06-30 11:23
 const demoData = [
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"阿泽爱钓鱼（四季抽鲢庸）","location":"江西抚州廖坊水库","product":"突击鲢四代","weight":50.14,"category":"30+","status":"审核中","platform":"抖音"},
@@ -617,12 +617,14 @@ const demoData = [
   {"name":"钓友一号","location":"铜陵顺安河","product":"突击鲢四代","weight":39.66,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"简单生活简单过","location":"武汉蔡甸东荆河","product":"突击鲢四代","weight":38,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"我是大壮啊","location":"沈阳溪溪湖湿地公园","product":"突击鲢四代","weight":36.45,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"共丶丶勉","location":"湖北省浠水县兰溪镇兰溪河","product":"突击鲢四代","weight":36,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"肖家公子 承接彩钢工程 【宝丰镇]","location":"湖北新洲","product":"突击鲢四代","weight":34,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"鑫哥钓鱼","location":"贵州","product":"淦将二代","weight":33.82,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"笑脸","location":"江西上饶","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"小可乐","location":"安徽","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"钓儿啷当—小周","location":"湖南长沙乔口防洪闸","product":"突击鲢四代","weight":30.14,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"小宇钓鱼-乐安河","location":"江西上饶","product":"淦将二代","weight":25.86,"category":"15+","status":"审核中","platform":"抖音"},
   {"name":"蒲涛钓鱼","location":"贵州黔南","product":"突击鲢四代","weight":20,"category":"15+","status":"审核中","platform":"抖音"},
   {"name":"一条","location":"江西·新余\n","product":"突击鲢四代","weight":15,"category":"15+","status":"审核中","platform":"抖音"},
@@ -668,7 +670,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-30 10:26';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-06-30 11:23';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
