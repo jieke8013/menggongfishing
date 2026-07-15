@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-07-15 10:17
+// 数据更新时间: 2026-07-15 11:16
 const demoData = [
   {"name":"钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"已核验","platform":"抖音"},
@@ -621,6 +621,7 @@ const demoData = [
   {"name":"SUN","location":"湖北省黄冈市黄州区沙街","product":"突击鲢三代","weight":37.42,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"我是大壮啊","location":"沈阳溪溪湖湿地公园","product":"突击鲢四代","weight":36.45,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"共丶丶勉","location":"湖北省浠水县兰溪镇兰溪河","product":"突击鲢四代","weight":36,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"欧阳OY","location":"湖北","product":"突击鲢四代","weight":35.2,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"肖家公子 承接彩钢工程 【宝丰镇]","location":"湖北新洲","product":"突击鲢四代","weight":34,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"鑫哥钓鱼","location":"贵州","product":"淦将二代","weight":33.82,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"笑脸","location":"江西上饶","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
@@ -675,7 +676,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-07-15 10:17';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-07-15 11:16';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
