@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-07-29 21:04
+// 数据更新时间: 2026-08-01 11:34
 const demoData = [
   {"name":"四川钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"已核验","platform":"抖音"},
@@ -627,6 +627,7 @@ const demoData = [
   {"name":"共丶丶勉","location":"湖北省浠水县兰溪镇兰溪河","product":"突击鲢四代","weight":36,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"欧阳OY","location":"湖北","product":"突击鲢四代","weight":35.2,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"肖家公子 承接彩钢工程 【宝丰镇]","location":"湖北新洲","product":"突击鲢四代","weight":34,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"彭大师","location":"江西余干县大溪乡","product":"突击鲢四代","weight":33.94,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"鑫哥钓鱼","location":"贵州","product":"淦将二代","weight":33.82,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"潇洒的王大狮","location":"湖北省武汉市滠水河","product":"突击鲢三代","weight":33.54,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"忆博","location":"鄱阳湖付家嘴","product":"突击鲢四代","weight":32.72,"category":"30+","status":"已核验","platform":"抖音"},
@@ -634,9 +635,11 @@ const demoData = [
   {"name":"笑脸","location":"江西上饶","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"小可乐","location":"安徽","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"辉子","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":31.68,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"瑶瑶","location":"鄱阳湖","product":"突击鲢四代","weight":31.58,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"强权","location":"湖北黄冈巴河镇大河","product":"突击鲢四代","weight":30.92,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"ₔ云’⑩九","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":30.76,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"钓儿啷当—小周","location":"湖南长沙乔口防洪闸","product":"突击鲢四代","weight":30.14,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"小宇钓鱼-乐安河","location":"江西上饶","product":"淦将二代","weight":25.86,"category":"15+","status":"审核中","platform":"抖音"},
   {"name":"蒲涛钓鱼","location":"贵州黔南","product":"突击鲢四代","weight":20,"category":"15+","status":"审核中","platform":"抖音"},
@@ -683,7 +686,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-07-29 21:04';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-01 11:34';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
