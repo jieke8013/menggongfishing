@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-08-17 12:06
+// 数据更新时间: 2026-08-22 13:05
 const demoData = [
   {"name":"四川钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"万州许伟（团队招人）","location":"重庆万州黄柏乡","product":"突击鲢四代","weight":59.8,"category":"30+","status":"审核中","platform":"抖音"},
@@ -615,13 +615,15 @@ const demoData = [
   {"name":"光年网络","location":"江西抚州廖坊水库","product":"突击鲢四代","weight":50.14,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"陈江永","location":"江西余干县大溪乡信江河","product":"突击鲢四代","weight":47.52,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"山海～","location":"湖北宜昌长阳清江河支流","product":"突击鲢四代","weight":47.49,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"小苟钓鲢鳙","location":"江西南昌赣江中支扬子洲前横河","product":"淦将臻彩","weight":47.26,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"@@1024","location":"重庆市云阳县三峡库区","product":"突击鲢四代","weight":44.3,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"小米爱钓鱼","location":"湖北宜昌熊渡坝上","product":"突击鲢四代","weight":42.6,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"紧紧","location":"湖北省黄冈市浠水河","product":"突击鲢四代","weight":42.06,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"1.9倍肌肉","location":"四川广元","product":"淦将巨物","weight":40,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"家妻向大小姐","location":"湖北宜昌熊度水库","product":"突击鲢四代","weight":40,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"艾生活艾钓鱼","location":"铜陵顺安河","product":"突击鲢四代","weight":39.66,"category":"30+","status":"已核验","platform":"抖音"},
-  {"name":"蒲涛钓鱼","location":"","product":"突击鲢四代","weight":38.18,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"蒲涛钓鱼","location":"贵州省福泉市两岔河","product":"突击鲢四代","weight":38.18,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"简单生活简单过","location":"武汉蔡甸东荆河","product":"突击鲢四代","weight":38,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"苹果","location":"贵州省都匀市罗甸县八总","product":"突击鲢四代","weight":37.8,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"SUN","location":"湖北省黄冈市黄州区沙街","product":"突击鲢三代","weight":37.42,"category":"30+","status":"已核验","platform":"抖音"},
@@ -696,7 +698,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-17 12:06';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-22 13:05';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
