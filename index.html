@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-08-26 14:00
+// 数据更新时间: 2026-08-26 15:02
 const demoData = [
   {"name":"四川钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"万州许伟（团队招人）","location":"重庆万州黄柏乡","product":"突击鲢四代","weight":59.8,"category":"30+","status":"审核中","platform":"抖音"},
@@ -702,7 +702,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-26 14:00';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-26 15:02';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
