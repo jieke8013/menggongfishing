@@ -607,11 +607,12 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-08-25 09:07
+// 数据更新时间: 2026-08-26 11:01
 const demoData = [
   {"name":"四川钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"万州许伟（团队招人）","location":"重庆万州黄柏乡","product":"突击鲢四代","weight":59.8,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"汻哆姩姒後","location":"湖南郴州暖水凉滩码头","product":"突击鲢三代","weight":53.1,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"雷小七","location":"湖北宜昌清江","product":"淦将二代","weight":52.07,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"光年网络","location":"江西抚州廖坊水库","product":"突击鲢四代","weight":50.14,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"Lucky日记","location":"浙江宁波大闸口","product":"突击鲢四代","weight":47.54,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"陈江永","location":"江西余干县大溪乡信江河","product":"突击鲢四代","weight":47.52,"category":"30+","status":"已核验","platform":"抖音"},
@@ -645,6 +646,7 @@ const demoData = [
   {"name":"小可乐","location":"安徽","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"银杏的馨","location":"江西省上饶市万年县梓埠镇港边徐家","product":"突击鲢三代","weight":31.82,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"石头秀","location":"江西省吉安市峡江县仙石下赣江","product":"突击鲢四代","weight":31.8,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"辉子","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":31.68,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"瑶瑶","location":"鄱阳湖","product":"突击鲢四代","weight":31.58,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"已核验","platform":"抖音"},
@@ -700,7 +702,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-25 09:07';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-08-26 11:01';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
