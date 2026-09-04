@@ -607,7 +607,7 @@ let currentFilter = 'all';
 let dataSource = '示例'; // 'demo' | 'feishu'
 
 // 飞书多维表格真实数据（部署时自动嵌入，API 不可用时兜底）
-// 数据更新时间: 2026-09-02 13:00
+// 数据更新时间: 2026-09-04 15:12
 const demoData = [
   {"name":"四川钓友一号","location":"四川太极湖","product":"淦将二代","weight":64.44,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"小邓鲢鳙记","location":"湖北宜昌清江","product":"淦将二代","weight":61.06,"category":"30+","status":"审核中","platform":"抖音"},
@@ -634,8 +634,10 @@ const demoData = [
   {"name":"我是大壮啊","location":"沈阳溪溪湖湿地公园","product":"突击鲢四代","weight":36.45,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"共丶丶勉","location":"湖北省浠水县兰溪镇兰溪河","product":"突击鲢四代","weight":36,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"欧阳OY","location":"湖北","product":"突击鲢四代","weight":35.2,"category":"30+","status":"审核中","platform":"抖音"},
+  {"name":"王鲢长","location":"湖北省秦皇岛市昌黎县碣阳湖水库","product":"突击鲢四代","weight":34.6,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"今晚吃鱼","location":"湖北黄冈浠水县兰溪镇","product":"突击鲢四代","weight":34.41,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"肖家公子 承接彩钢工程 【宝丰镇]","location":"湖北新洲","product":"突击鲢四代","weight":34,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"蓝天叶","location":"湖北省黄石市富河","product":"突击鲢四代","weight":34,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"彭大师","location":"江西余干县大溪乡","product":"突击鲢四代","weight":33.94,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"鑫哥钓鱼","location":"贵州","product":"淦将二代","weight":33.82,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"潇洒的王大狮","location":"湖北省武汉市滠水河","product":"突击鲢三代","weight":33.54,"category":"30+","status":"已核验","platform":"抖音"},
@@ -643,6 +645,7 @@ const demoData = [
   {"name":"忆博","location":"鄱阳湖付家嘴","product":"突击鲢四代","weight":32.72,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"时间●)o(●静好","location":"江西省乐安河","product":"突击鲢三代","weight":32.58,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"袢","location":"湖北省黄冈市巴河镇大水河","product":"突击鲢四代","weight":32.34,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"涂涂涂不空军","location":"江西赣江南支新村","product":"突击鲢四代","weight":32.12,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"笑脸","location":"江西上饶","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"小可乐","location":"安徽","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"大福大鳜","location":"南京滁河","product":"突击鲢四代","weight":32,"category":"30+","status":"已核验","platform":"抖音"},
@@ -651,8 +654,10 @@ const demoData = [
   {"name":"辉子","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":31.68,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"瑶瑶","location":"鄱阳湖","product":"突击鲢四代","weight":31.58,"category":"30+","status":"已核验","platform":"抖音"},
   {"name":"长岭朱明家电","location":"湖北十堰","product":"突击鲢四代","weight":31.39,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"明(￣o￣) . z Z","location":"江西万年乐安江","product":"突击鲢三代","weight":31.1,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"\n小小熊大爱钓鱼","location":"江西南昌红谷滩区厚田乡狮子村赣江","product":"突击鲢四代","weight":31.06,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"强权","location":"湖北黄冈巴河镇大河","product":"突击鲢四代","weight":30.92,"category":"30+","status":"已核验","platform":"抖音"},
+  {"name":"风雨末路","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":30.8,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"ₔ云’⑩九","location":"湖北黄冈浠水兰溪河","product":"突击鲢四代","weight":30.76,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"渡劫，散修","location":"安徽粮长水库","product":"突击鲢四代","weight":30.48,"category":"30+","status":"审核中","platform":"抖音"},
   {"name":"持杆定江河","location":"江西省余干县大溪乡","product":"突击鲢四代","weight":30.38,"category":"30+","status":"审核中","platform":"抖音"},
@@ -703,7 +708,7 @@ function useDemoData(msg) {
   lbData = demoData;
   dataSource = 'demo';
   const el = document.getElementById('lb-source');
-  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-09-02 13:00';
+  el.textContent = msg || '数据来源: 飞书多维表格 · 上次同步 2026-09-04 15:12';
   el.style.color = 'var(--t3)';
   applyFilter();
 }
